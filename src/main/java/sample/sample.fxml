@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TextField layoutX="51.0" layoutY="33.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+        <TextField layoutX="51.0" layoutY="61.0" prefHeight="25.0" prefWidth="230.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="65.0" />
+        <TextField layoutX="14.0" layoutY="116.0" prefHeight="264.0" prefWidth="218.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="110.0" />
+        <Text layoutX="10.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ваше имя" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тема обращения" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="45.0" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Суть проблемы" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="90.0" />
+        <Button layoutX="188.0" layoutY="418.0" mnemonicParsing="false" text="Отправить" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="155.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextField layoutX="109.0" layoutY="14.0" prefHeight="25.0" prefWidth="183.0" AnchorPane.leftAnchor="109.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="14.0" />
+      <Text layoutX="9.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IP адрес" AnchorPane.bottomAnchor="84.98828125" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="248.2578125" AnchorPane.topAnchor="18.01171875" />
+      <TextField layoutX="109.0" layoutY="49.0" prefHeight="25.0" prefWidth="183.0" AnchorPane.leftAnchor="109.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="49.0" />
+      <Text layoutX="9.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кабинет/отдел" AnchorPane.bottomAnchor="84.98828125" AnchorPane.leftAnchor="8.904296875" AnchorPane.rightAnchor="213.095703125" AnchorPane.topAnchor="53.01171875" />
+      <TextField layoutX="109.0" layoutY="85.0" prefHeight="25.0" prefWidth="183.0" AnchorPane.leftAnchor="109.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="85.0" />
+      <Text layoutX="9.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя компьютера" AnchorPane.bottomAnchor="84.98828125" AnchorPane.leftAnchor="8.244140625" AnchorPane.rightAnchor="197.755859375" AnchorPane.topAnchor="89.0" />
+      <Button layoutX="260.0" layoutY="120.0" mnemonicParsing="false" text="OK" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="9.0" />
+   </children>
+</AnchorPane>
