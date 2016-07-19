@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - taskchat@10.41.0.111" uuid="2cd59e91-62d4-4343-b373-b272f297ea90">
+    <database-info product="MySQL" version="5.7.13-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="taskchat"/>
+    <table name="log" schema="" catalog="taskchat" type="TABLE">
+      <column name="_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Log_login" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Log_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="_id"/>
+      <index name="_id_UNIQUE" unique="true" columns="_id"/>
+    </table>
+    <table name="tasks" schema="" catalog="taskchat" type="TABLE">
+      <column name="idTasks" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Task_autor" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Task_user" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Task_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="idTasks"/>
+      <index name="idTasks_UNIQUE" unique="true" columns="idTasks"/>
+    </table>
+    <table name="users" schema="" catalog="taskchat" type="TABLE">
+      <column name="_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Login" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="IP" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KABINET" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KABINET.COMP" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="_id"/>
+      <index name="_id_UNIQUE" unique="true" columns="_id"/>
+    </table>
+  </data-source>
+</component>
