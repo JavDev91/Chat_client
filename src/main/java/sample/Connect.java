@@ -4,6 +4,8 @@ package sample;
  * Created by prog on 18.07.2016.
  */
 
+import com.mysql.jdbc.PreparedStatement;
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,7 +18,7 @@ public class Connect {
     private String password = "8323102";
     private String URL = "jdbc:mysql://10.41.0.111:3306";
     private static Statement stmp;
-    private static ResultSet resultSet;
+    private static int resultSet;
 
     private String user;
     private String ip;
@@ -62,16 +64,26 @@ public class Connect {
         this.ip = ip;
         this.kabinet = kabinet;
         this.komp = komp;
+
+
         String query = "INSERT INTO `taskchat`.`users` (`Login`, `IP`, `KABINET`, `KABINET.COMP`) VALUES (" + "'"+ user.toString() + "'," + "'" + ip.toString() + "'," + "'" + kabinet.toString() + "'," + "'" + komp.toString() + "')";
 
         connection = DriverManager.getConnection(URL, login, password);
         stmp = connection.createStatement();
-        resultSet = stmp.executeQuery(query);
+        resultSet = stmp.executeUpdate(query);
+
 
 
 
 
     }
+
+//    public static void main(String [] args) throws SQLException {
+//
+//
+//
+//
+//    }
 
 
 }
