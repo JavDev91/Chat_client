@@ -15,21 +15,24 @@
       <index name="_id_UNIQUE" unique="true" columns="_id"/>
     </table>
     <table name="tasks" schema="" catalog="taskchat" type="TABLE">
-      <column name="idTasks" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="Task_autor" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="Task_user" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="Task_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <primary-key name="PRIMARY" columns="idTasks"/>
-      <index name="idTasks_UNIQUE" unique="true" columns="idTasks"/>
+      <column name="_id_task" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Task_autor" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Task_theme" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Task_name" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="IP_author" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Task_user" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Task_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="_id_task"/>
     </table>
     <table name="users" schema="" catalog="taskchat" type="TABLE">
-      <column name="_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="Login" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="IP" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="KABINET" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="KABINET.COMP" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="_id"/>
       <index name="_id_UNIQUE" unique="true" columns="_id"/>
+      <index name="idx_users_Login" unique="false" columns="Login"/>
     </table>
   </data-source>
 </component>

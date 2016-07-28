@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.net.InetAddress;
+
 public class Main extends Application {
 
     Stage primaryStage=null;
@@ -17,36 +19,29 @@ public class Main extends Application {
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
+
+        InetAddress addr = InetAddress.getLocalHost();
+        Connect connect = new Connect();
+
+
+
+
 
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Task_Chat");
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("/first_for_prog.fxml"));
-        init =  loader.load();
+        if (connect.checkUsers(addr.toString())) {
+            loader.setLocation(Main.class.getResource("/first_for_prog.fxml"));
+        } else {
+            loader.setLocation(Main.class.getResource("/sample.fxml"));
+        }
+
+        init = loader.load();
         Scene scene = new Scene(init);
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
-        //init();
-
-
-    }
-
-//    public void init() throws Exception{
-
-//        FXMLLoader loader = new FXMLLoader();
-//        loader.setLocation(Main.class.getResource("/sample.fxml"));
-//        init =  loader.load();
-//        Scene scene = new Scene(init);
-//        primaryStage.setScene(scene);
-//        primaryStage.show();
-
-//    }
-
-    public void checkUser() {
-
-        Connect connect = new Connect();
-        connect.toConnect();
 
 
     }

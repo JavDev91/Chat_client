@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="Chat_client">
+    <output-path>$PROJECT_DIR$/out/artifacts/Chat_client</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.Main" />
+        <option name="description" value="" />
+        <option name="htmlParamFile" value="" />
+        <option name="paramFile" value="" />
+        <option name="title" value="Task_Chat" />
+        <option name="vendor" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Chat_client.jar">
+        <element id="module-output" name="Chat_client" />
+        <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
+      </element>
+    </root>
+  </artifact>
+</component>

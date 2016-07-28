@@ -2,8 +2,14 @@ package sample;
 
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Controller {
 
@@ -12,24 +18,45 @@ public class Controller {
     String komp;
     String kabinet;
 
+    String task_text;
+    String task_theme_text;
+    String user_name_text;
+    String address_host;
+    private int resultSet;
+
     @FXML
-    private TextField user_field;
+    private TextField user_field, kabinet_field;
+
     @FXML
-    private TextField ip_field;
+    private  TextField task_theme, task, user_name;
+
     @FXML
-    private TextField kabinet_field;
-    @FXML
-    private TextField computer_field;
+    Button btn_task;
 
 
-    public void new_user()  throws SQLException {
+
+
+    public void new_user() throws SQLException, UnknownHostException {
 
         user = user_field.getText();
-        ip = ip_field.getText();
         kabinet = kabinet_field.getText();
-        komp = computer_field.getText();
+        InetAddress addr = InetAddress.getLocalHost();
+        ip = addr.getHostAddress();
+        komp = addr.getHostName();
         Connect connect = new Connect();
         connect.insert_new_users(user,ip,kabinet,komp);
+    }
+
+    public void new_task() throws SQLException, UnknownHostException {
+
+
+        task_text = task_theme.getText();
+        task_theme_text = task.getText();
+        user_name_text = user_name.getText();
+
+        Connect connect = new Connect();
+        connect.new_task_SQL(user_name_text,task_theme_text,task_text);
+
     }
 
 }
