@@ -9,10 +9,10 @@
     <children>
         <TextField fx:id="user_name" layoutX="51.0" layoutY="33.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
         <TextField fx:id="task_theme" layoutX="51.0" layoutY="61.0" prefHeight="25.0" prefWidth="230.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="65.0" />
-        <TextField fx:id="task" layoutX="14.0" layoutY="116.0" prefHeight="264.0" prefWidth="218.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="110.0" />
         <Text layoutX="10.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ваше имя" />
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тема обращения" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="45.0" />
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Суть проблемы" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="90.0" />
         <Button fx:id="btn_task" layoutX="188.0" layoutY="418.0" mnemonicParsing="false" onAction="#new_task" text="Отправить" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0" />
+      <TextArea fx:id="task" layoutX="14.0" layoutY="107.0" prefHeight="302.0" prefWidth="223.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="107.0" />
     </children>
 </AnchorPane>

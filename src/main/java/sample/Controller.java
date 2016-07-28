@@ -3,13 +3,14 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.sql.ResultSet;
+
 import java.sql.SQLException;
-import java.sql.Statement;
+
 
 public class Controller {
 
@@ -28,12 +29,13 @@ public class Controller {
     private TextField user_field, kabinet_field;
 
     @FXML
-    private  TextField task_theme, task, user_name;
+    private  TextField task_theme, user_name;
+
+    @FXML
+    private TextArea task;
 
     @FXML
     Button btn_task;
-
-
 
 
     public void new_user() throws SQLException, UnknownHostException {
@@ -49,9 +51,9 @@ public class Controller {
 
     public void new_task() throws SQLException, UnknownHostException {
 
-
         task_text = task_theme.getText();
         task_theme_text = task.getText();
+        task.setPrefColumnCount(6);
         user_name_text = user_name.getText();
 
         Connect connect = new Connect();
