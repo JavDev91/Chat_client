@@ -47,6 +47,7 @@ public class Controller {
         komp = addr.getHostName();
         Connect connect = new Connect();
         connect.insert_new_users(user,ip,kabinet,komp);
+        System.exit(0);
     }
 
     public void new_task() throws SQLException, UnknownHostException {

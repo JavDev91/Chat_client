@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="Chat_client:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Chat_client_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Chat_client.jar">
+        <element id="module-output" name="Chat_client" />
+      </element>
+      <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
+    </root>
+  </artifact>
+</component>

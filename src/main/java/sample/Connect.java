@@ -1,10 +1,5 @@
 package sample;
 
-/**
- * Created by prog on 18.07.2016.
- */
-
-import com.mysql.jdbc.PreparedStatement;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -12,6 +7,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import static java.lang.System.*;
 
 
 public class Connect {
@@ -43,7 +40,7 @@ public class Connect {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(URL, login, password);
             if (connection!=null) {
-                System.out.println("connect success");
+                out.println("connect success");
             }
 
         } catch (SQLException e) {
@@ -87,21 +84,27 @@ public class Connect {
     public boolean checkUsers(String check) throws SQLException, UnknownHostException{
 
         this.check = check;
-        boolean otvet = false;
-        String otvetSql = "";
-        String query = "SELECT IP FROM taskchat.users WHERE " + "'" +check + "'";
+        boolean otvet;
+        String otvetSql = " ";
+
+        String query = "SELECT IP FROM taskchat.users WHERE IP = " + "'" + check + "'";
         toConnect();
         stmp = connection.createStatement();
         rs = stmp.executeQuery(query);
+
         while (rs.next()) {
             otvetSql = rs.getString(1);
         }
+
         if (otvetSql.equals(check) ) {
-            otvet = true;
-        } else {
+            System.out.println(otvetSql.equals(check));
             otvet = false;
+        } else {
+            otvet = true;
         }
         return otvet;
+
+
 
     }
 

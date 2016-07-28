@@ -24,15 +24,15 @@ public class Main extends Application {
         InetAddress addr = InetAddress.getLocalHost();
         Connect connect = new Connect();
 
-
-
-
-
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Task_Chat");
         FXMLLoader loader = new FXMLLoader();
-        if (connect.checkUsers(addr.toString())) {
+
+
+
+        if (connect.checkUsers(addr.getHostAddress())) {
             loader.setLocation(Main.class.getResource("/first_for_prog.fxml"));
+
         } else {
             loader.setLocation(Main.class.getResource("/sample.fxml"));
         }
